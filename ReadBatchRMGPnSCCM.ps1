@@ -80,5 +80,7 @@ Remove-Item -Path $CurrentPath\SMSCFG.ini -Force -ErrorAction SilentlyContinue
 Remove-Item -Path $CurrentPath\SMS*.mif -Force -ErrorAction SilentlyContinue
 Remove-Item -Path $CurrentPath\SMS*.mif -Force -ErrorAction SilentlyContinue 
 
+start-sleep -s 10
+
 stop-process -Id $PID
 exit
