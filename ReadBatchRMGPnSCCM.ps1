@@ -68,7 +68,7 @@ Remove-Item -Path $CurrentPath\SMS -Force -Recurse -ErrorAction SilentlyContinue
 
 # Reset MDM Authority
 # CurrentPath should still be correct, we are removing this key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DeviceManageabilityCSP
-Remove-Item -Path $CurrentPath\DeviceManageabilityCSP -Force -Recurse -ErrorAction SilentlyContinue | Out-File -FilePath C:\HWID\Scripts\RemoveSCCMAD\logs\$(get-date -f yyyy-MM-dd)-RemoveSCCMlogs.txt
+Remove-Item -Path $CurrentPath\DeviceManageabilityCSP -Force -Recurse -ErrorAction SilentlyContinue | Out-File -FilePath C:\HWID\$(get-date -f yyyy-MM-dd)-RemoveSCCMlogs.txt
 
 # Remove Folders and Files
 # Tidy up garbage in Windows folder
